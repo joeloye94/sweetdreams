@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+<title>Untitled Document</title>
+<link href="font/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+<style type="text/css">
+body{
+	color:#FFF;
+	background-color:#000;	
+	font-family: 'adlerregular';
+	max-height:799px;
+}
+img{
+	max-width:100%;		
+}
+#frame{
+	width:75%;
+	position : absolute;
+  top      : 330px;
+  right    : 0;
+  bottom   : 0;
+  left     : 0;
+  margin   : auto;	
+	animation: noise .8s linear infinite;
+}
+#frame1{
+	position:absolute;
+	top:340px;
+	font-size:50px;
+	animation: noise1 .6s linear infinite;
+}
+
+h1{
+	font-size:70px;
+	
+}
+#img-holder { 
+	max-height:799px;
+	
+	
+}
+#img-holder img{
+	width:100%;	
+}
+
+
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}  
+  4.3% {opacity: 1; transform: scaleY(1.2);}
+  43% {opacity: 1; transform: scaleX(1.5);}
+  
+}
+@keyframes noise1 {
+  0%, 5%, 12%, 22%, 66%, 80% {opacity: 0; transform: scale(1,1);}  
+  15%, 67%{opacity: 0.5; transform: scale(10.3,1); transform:skew(100,200)}
+  45%{opacity:0.4; transform:skew(4,1), scale(1,2)}
+}
+
+a{
+	color:red!important
+}
+</style>
+<body>
+	<center>
+    <h1>WARNING, this site might deem extremely disturbing to some viewers. VIEWER DISCRETION IS HIGHLY ADVISED.</h1>
+	<small style="display:block;margin:auto;width:60%">As to accomodate the autoplay policy (<a href="https://developer.chrome.com/blog/autoplay/">https://developer.chrome.com/blog/autoplay/</a>), goto chrome://settings/content, look for security and privacy, site settings, under additional content settings,
+		copy and paste this site into the sound section to allow sound playback.
+	</small>
+	<p><a style="font-size:26px" href="app.html">Start</a></p>
+    
+    
+    </center>
+</body>
+</html>

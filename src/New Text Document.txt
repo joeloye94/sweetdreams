@@ -1,0 +1,344 @@
+//https://www.w3schools.com/js/js_timing.asp  -  setTimeInterval
+//https://codepen.io/kaypooma/pen/ehfjC?page=4 - glitch
+
+var lyrics = [];
+lyrics[0] = "Sweet dreams are made of this";
+lyrics[1] = "Who am I to disagree";
+lyrics[2] = "Travel the world and the seven seas";
+lyrics[3] = "Everybody is looking for something";
+
+lyrics[4] = "Some of them want to use you";//36000
+lyrics[5] = "Some of them want to get used by you";//40500
+lyrics[6] = "Some of them want to abuse you";//46000
+lyrics[7] = "Some of them want to be abused";//51500
+
+lyrics[8] = "Sweet dreams are made of this";//1:33 5 - 93500
+lyrics[9] = "Who had a mind to disagree";//1.38 5 - 98500
+lyrics[10] = "Travel the world and the seven seas";//1.43 5 - 	103500
+lyrics[11] = "Everybody is looking for something";//1.48 5 - 108500
+
+lyrics[12] = "Some of them want to use you";//1.54 - 114000
+lyrics[13] = "Some of them want to get used by you";//1.59 - 119000
+lyrics[14] = "Some of them want to abuse you";//2.04 5 - 124500
+lyrics[15] = "Some of them want to be a - ";//2.09 5 - 129500
+lyrics[16] = "-BUSED!!!!";//2.13 5 - 133500
+
+lyrics[17] = "I want to use you and abuse you";//2.20 5 - 140500
+lyrics[18] = "I want to know what's inside";//2.25 5 - 145500
+lyrics[19] = "Moving on (hold your head)";//2.31 5 - 151500
+lyrics[20] = "Moving on (keep your head)";//2.34 5 - 154500
+lyrics[21] = "Moving on (hold your head)";//2.36 5 - 156500
+lyrics[22] = "Moving on (keep your head)";//2.39 5 - 159500
+lyrics[23] = "Moving on (hold your head)";//2.41 5 - 161500
+lyrics[24] = "Moving on (keep your head)";//2.44 5 - 164500
+lyrics[25] = "MOVING ON!";//2.46 5 - 166500
+
+lyrics[26] = "Sweet dreams are made of this";//3.11 5 - 191500
+lyrics[27] = "Who am I to disagree";//3.16 - 196000
+lyrics[28] = "Travel the world and the seven seas";//3.21 - 201000
+lyrics[29] = "Everybody is looking for something";//3.26 5 - 206500
+
+lyrics[30] = "SOME OF THEM WANT TO USE YOU";//3.31 5 - 211500
+lyrics[31] = "SOME OF THEM WANT TO GET USED BY YOU";//3.36 5 - 216500
+lyrics[32] = "Some of them want to abuse you";//3.42 - 222000
+lyrics[33] = "Some of them want to be";//3.47 - 227000
+lyrics[34] = "ABUSED!!!!";//3.49 5 - 229500
+ 
+lyrics[35] = "I GOTTA USE YOU AND ABUSE YOU";//3.57 5 - 237500
+lyrics[36] = "I GOTTA KNOW WHAT'S INSIDE";//4.02 5 - 242500
+lyrics[37] = "I GOTTA USE YOU AND ABUSE YOU";//4.07 5 - 247500
+lyrics[38] = "I GOTTA KNOW WHAT'S INSIDE";//4.12 5 -  252500
+
+ 
+
+var lr = document.getElementById("showlr");
+var lr1 = document.getElementById("showlr1");
+
+window.setTimeout(lyrics1,15000);
+
+function lyrics1(){
+	lr.innerHTML = lyrics[0];
+	lr1.innerHTML = lyrics[0];
+};
+
+window.setTimeout(lyrics2,20000);
+
+function lyrics2(){
+	lr.innerHTML = lyrics[1];
+	lr1.innerHTML = lyrics[1];
+};
+
+window.setTimeout(lyrics3,24500);
+
+function lyrics3(){
+	lr.innerHTML = lyrics[2];
+	lr1.innerHTML = lyrics[2];
+};
+
+window.setTimeout(lyrics4,30500);
+
+function lyrics4(){
+	lr.innerHTML = lyrics[3];
+	lr1.innerHTML = lyrics[3];
+};
+
+window.setTimeout(lyrics5,35500);
+
+function lyrics5(){
+	lr.innerHTML = lyrics[4];
+	lr1.innerHTML = lyrics[4];
+};
+
+window.setTimeout(lyrics6,40500);
+
+function lyrics6(){
+	lr.innerHTML = lyrics[5];
+	lr1.innerHTML = lyrics[5];
+};
+window.setTimeout(lyrics7,46000);
+
+function lyrics7(){
+	lr.innerHTML = lyrics[6];
+	lr1.innerHTML = lyrics[6];
+};
+window.setTimeout(lyrics8,51500);
+
+function lyrics8(){
+	lr.innerHTML = lyrics[7];
+	lr1.innerHTML = lyrics[7];
+};
+
+
+
+
+
+
+window.setTimeout(lyrics9,93500);
+
+function lyrics9(){
+	lr.innerHTML = lyrics[8];
+	lr1.innerHTML = lyrics[8];
+};
+window.setTimeout(lyrics10,98500);
+
+function lyrics10(){
+	lr.innerHTML = lyrics[9];
+	lr1.innerHTML = lyrics[9];
+};
+window.setTimeout(lyrics11,103500);
+
+function lyrics11(){
+	lr.innerHTML = lyrics[10];
+	lr1.innerHTML = lyrics[10];
+};
+window.setTimeout(lyrics12,108500);
+
+function lyrics12(){
+	lr.innerHTML = lyrics[11];
+	lr1.innerHTML = lyrics[11];
+};
+window.setTimeout(lyrics13,114000);
+
+function lyrics13(){
+	lr.innerHTML = lyrics[12];
+	lr1.innerHTML = lyrics[12];
+};
+window.setTimeout(lyrics14,119000);
+
+function lyrics14(){
+	lr.innerHTML = lyrics[13];
+	lr1.innerHTML = lyrics[13];
+};
+window.setTimeout(lyrics15,124500);
+
+function lyrics15(){
+	lr.innerHTML = lyrics[14];
+	lr1.innerHTML = lyrics[14];
+};
+window.setTimeout(lyrics16,129500);
+
+function lyrics16(){
+	lr.innerHTML = lyrics[15];
+	lr1.innerHTML = lyrics[15];
+};
+window.setTimeout(lyrics17,133500);
+
+function lyrics17(){
+	lr.innerHTML = lyrics[16];
+	document.getElementById("showlr").style.fontSize = "150px";
+	
+};
+window.setTimeout(lyrics18,140500);
+
+function lyrics18(){
+	lr.innerHTML = lyrics[17];
+	document.getElementById("showlr").style.fontSize = "70px";
+	
+	
+};
+window.setTimeout(lyrics19,145500);
+
+function lyrics19(){
+	lr.innerHTML = lyrics[18];
+	lr1.innerHTML = lyrics[18];
+};
+
+window.setTimeout(lyrics20,151500);
+
+function lyrics20(){
+	lr.innerHTML = lyrics[19];
+	lr1.innerHTML = lyrics[19];
+};
+window.setTimeout(lyrics21,154500);
+
+function lyrics21(){
+	lr.innerHTML = lyrics[20];
+	lr1.innerHTML = lyrics[20];
+};
+window.setTimeout(lyrics22,156500);
+
+function lyrics22(){
+	lr.innerHTML = lyrics[21];
+	lr1.innerHTML = lyrics[21];
+};
+window.setTimeout(lyrics23,159500);
+
+function lyrics23(){
+	lr.innerHTML = lyrics[22];
+	lr1.innerHTML = lyrics[22];
+};
+window.setTimeout(lyrics24,161500);
+
+function lyrics24(){
+	lr.innerHTML = lyrics[23];
+	lr1.innerHTML = lyrics[23];
+};
+window.setTimeout(lyrics25,164500);
+
+function lyrics25(){
+	lr.innerHTML = lyrics[24];
+	lr1.innerHTML = lyrics[24];
+};
+window.setTimeout(lyrics26,166500);
+
+function lyrics26(){
+	lr.innerHTML = lyrics[25];
+	document.getElementById("showlr").style.fontSize = "150px";
+	
+};
+window.setTimeout(lyrics27,191500);
+
+function lyrics27(){
+	lr.innerHTML = lyrics[26];
+	document.getElementById("showlr").style.fontSize = "70px";
+	
+};
+window.setTimeout(lyrics28,196000);
+
+function lyrics28(){
+	lr.innerHTML = lyrics[27];
+	lr1.innerHTML = lyrics[27];
+};
+window.setTimeout(lyrics29,201000);
+
+function lyrics29(){
+	lr.innerHTML = lyrics[28];
+	lr1.innerHTML = lyrics[28];
+};
+window.setTimeout(lyrics30,206500);
+
+function lyrics30(){
+	lr.innerHTML = lyrics[29];
+	lr1.innerHTML = lyrics[29];
+};
+window.setTimeout(lyrics31,211500);
+
+function lyrics31(){
+	lr.innerHTML = lyrics[30];
+	lr1.innerHTML = lyrics[30];
+};
+window.setTimeout(lyrics32,216500);
+
+function lyrics32(){
+	lr.innerHTML = lyrics[31];
+	lr1.innerHTML = lyrics[31];
+};
+window.setTimeout(lyrics33,222000);
+
+function lyrics33(){
+	lr.innerHTML = lyrics[32];
+	lr1.innerHTML = lyrics[32];
+};
+window.setTimeout(lyrics34,227000);
+
+function lyrics34(){
+	lr.innerHTML = lyrics[33];
+	lr1.innerHTML = lyrics[33];
+};
+window.setTimeout(lyrics35,229500);
+
+function lyrics35(){
+	lr.innerHTML = lyrics[34];
+	document.getElementById("showlr").style.fontSize = "150px";
+	
+};
+window.setTimeout(lyrics36,237500);
+
+function lyrics36(){
+	lr.innerHTML = lyrics[35];
+	document.getElementById("showlr").style.fontSize = "70px";
+	
+};
+window.setTimeout(lyrics37,242500);
+
+function lyrics37(){
+	lr.innerHTML = lyrics[36];
+	lr1.innerHTML = lyrics[36];
+};
+window.setTimeout(lyrics38,247500);
+
+function lyrics38(){
+	lr.innerHTML = lyrics[37];
+	lr1.innerHTML = lyrics[37];
+};
+window.setTimeout(lyrics39,252500);
+
+function lyrics39(){
+	lr.innerHTML = lyrics[38];
+	lr1.innerHTML = lyrics[38];
+};
+//blanks
+
+
+function blank(){
+	lr.innerHTML = " ";
+	lr1.innerHTML = " ";
+};
+window.setTimeout(blank,8000);
+window.setTimeout(blank,58000);
+window.setTimeout(blank,138000);
+window.setTimeout(blank,169000);
+window.setTimeout(blank,259000);
+
+
+//img
+var pic = document.getElementsByTagName("img")[0];
+pic.style.display = "none";
+
+window.setTimeout(picShow,56500)
+
+function picShow(){
+	pic.style.display = "block";
+}
+
+//text
+document.getElementById("frame1").style.display = "none";
+document.getElementById("frame1").style.animation = "none";
+
+
+
+window.setTimeout(showTxt,15000)
+function showTxt(){
+	document.getElementById("frame1").style.display = "block";	
+	document.getElementById("frame1").style.animation = "noise1 .6s linear infinite";
+}
