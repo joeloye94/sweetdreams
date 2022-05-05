@@ -63,8 +63,8 @@ h1{
 <body>
 	<center>
 	
-    <div id="img-holder">
-    	<img src="./src/01a48717f30ae0a489e9a7498fc50e587250e8878fe86600736f8fa48a33b6a7_1.gif">
+    <div id="img-holder" style="display:none">
+    	<img src="./src/01a48717f30ae0a489e9a7498fc50e587250e8878fe86600736f8fa48a33b6a7_1.gif" style="display:none">
     </div>
 
 	<!--WARNING, this site might deem extremely disturbing to some viewers. VIEWER DISCRETION IS HIGHLY ADVISED.-->
@@ -413,6 +413,7 @@ h1{
 
 		function picShow(){
 			pic.style.display = "block";
+			document.getElementById("img-holder").style.display = "block";
 		}
 
 		//text
