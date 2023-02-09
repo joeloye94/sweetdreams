@@ -62,14 +62,16 @@ h1{
 </style>
 <body>
 	<center>
+		<audio id="music" src="./src/Sweet Dreams (Are Made Of This) (Alt. Version).mp3"></audio>
+		<button>play</button>
 	
-    <div id="img-holder" style="display:none">
-    	<img src="./src/01a48717f30ae0a489e9a7498fc50e587250e8878fe86600736f8fa48a33b6a7_1.gif" style="display:none">
-    </div>
+		<div id="img-holder" style="display:none">
+			<img src="./src/01a48717f30ae0a489e9a7498fc50e587250e8878fe86600736f8fa48a33b6a7_1.gif" style="display:none">
+		</div>
 
-	<!--WARNING, this site might deem extremely disturbing to some viewers. VIEWER DISCRETION IS HIGHLY ADVISED.-->
-    <div id="frame"> <h1 id="showlr"></h1></div>
-    <div id="frame1"> <h1 id="showlr1"></h1></div>
+		<!--WARNING, this site might deem extremely disturbing to some viewers. VIEWER DISCRETION IS HIGHLY ADVISED.-->
+		<div id="frame"> <h1 id="showlr"></h1></div>
+		<div id="frame1"> <h1 id="showlr1"></h1></div>
     
     
     
@@ -84,7 +86,9 @@ h1{
 
 <script>
 
+	
 	function playSweetDreams(){
+		
 		var lyrics = [];
 		lyrics[0] = "Sweet dreams are made of this";
 		lyrics[1] = "Who am I to disagree";
@@ -429,6 +433,10 @@ h1{
 		}
 	}
 
+	function initSweetDreams(){
+		return document.querySelector('#music').play();
+	}
+
 	
 	window.onload=()=>{
 		var audio = document.createElement("AUDIO")
@@ -443,12 +451,20 @@ h1{
 			}).catch(error => {
 				// Autoplay was prevented.
 				// Show a "Play" button so that user can start playback.
-				console.log("error playing file");
-				alert("please enable audio access");
-				document.querySelector('body').style.display = "none";
-				document.querySelector('html').style.background = "black"
+				console.log("promise rejected playing file");
+				alert("please click play button");
+				//document.querySelector('body').style.display = "none";
+				// document.querySelector('html').style.background = "black"
+				document.querySelector('button').addEventListener("click",(ev)=>{
+					document.querySelector('button').style.display = "none"
+					document.querySelector('#music').play()
+					playSweetDreams()
+				})
 			});
 		}
+	}
+	function manualPlaySweetDreams(){
+		
 	}
 </script>
 
