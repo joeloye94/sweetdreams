@@ -447,6 +447,7 @@ h1{
 			promise.then(_ => {
 				// Autoplay started!
 				console.log("file loaded");
+				document.querySelector('button').style.display = "none"
 				playSweetDreams();
 			}).catch(error => {
 				// Autoplay was prevented.
