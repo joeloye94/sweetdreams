@@ -11,6 +11,7 @@ body{
 	background-color:#000;	
 	font-family: 'adlerregular';
 	max-height:799px;
+	overflow:hidden;
 }
 img{
 	max-width:100%;		
@@ -18,11 +19,11 @@ img{
 #frame{
 	width:75%;
 	position : absolute;
-  top      : 330px;
-  right    : 0;
-  bottom   : 0;
-  left     : 0;
-  margin   : auto;	
+	top      : 330px;
+	right    : 0;
+	bottom   : 0;
+	left     : 0;
+	margin   : auto;	
 	animation: noise .8s linear infinite;
 }
 #frame1{
@@ -45,6 +46,12 @@ h1{
 	width:100%;	
 }
 
+@media(max-width:500px){
+h1{
+	font-size:36px;
+}
+}
+
 
 @keyframes noise {
   0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}  
@@ -57,8 +64,9 @@ h1{
   15%, 67%{opacity: 0.5; transform: scale(10.3,1); transform:skew(100,200)}
   45%{opacity:0.4; transform:skew(4,1), scale(1,2)}
 }
-
-
+#showlr{
+	background-color: black;
+}
 </style>
 <body>
 	<center>
@@ -66,7 +74,17 @@ h1{
 		<button style="visibility:hidden">play</button>
 	
 		<div id="img-holder" style="display:none">
-			<img src="./src/01a48717f30ae0a489e9a7498fc50e587250e8878fe86600736f8fa48a33b6a7_1.gif" style="display:none">
+			<!-- <img class="pics" src="./src/01a48717f30ae0a489e9a7498fc50e587250e8878fe86600736f8fa48a33b6a7_1.gif" style="display:none"> -->
+			<img class="pics" src="./src/1.jpg" style="display:none">
+			<img class="pics" src="./src/2.jpg" style="display:none">
+			<img class="pics" src="./src/3.jpg" style="display:none">
+			<img class="pics" src="./src/4.jpg" style="display:none">
+			<img class="pics" src="./src/5.jpg" style="display:none">
+			<img class="pics" src="./src/6.jpg" style="display:none">
+			<img class="pics" src="./src/7.jpg" style="display:none">
+			<img class="pics" src="./src/8.jpg" style="display:none">
+			<img class="pics" src="./src/9.jpg" style="display:none">
+			<img class="pics" src="./src/10.jpg" style="display:none">
 		</div>
 
 		<!--WARNING, this site might deem extremely disturbing to some viewers. VIEWER DISCRETION IS HIGHLY ADVISED.-->
@@ -88,13 +106,20 @@ h1{
 
 	
 	function playSweetDreams(){
-		
+
+		var lr = document.getElementById("showlr");
+		var lr1 = document.getElementById("showlr1");
+
+		// var pic = document.getElementsByTagName("img")[0];
+		// pic.style.display = "none";
+
+		//text
+		document.getElementById("frame1").style.display = "none";
+		document.getElementById("frame1").style.animation = "none";
+
 		var lyrics = [
 			{lyrics: "", showTime: 8000},
-			{lyrics: "Sweet dreams are made of this", showTime: 15000, fn:()=>{
-				document.getElementById("frame1").style.display = "block";	
-				document.getElementById("frame1").style.animation = "noise1 .6s linear infinite";
-			}},
+			{lyrics: "Sweet dreams are made of this", showTime: 15000},
 			{lyrics: "Who am I to disagree", showTime: 20000},
 			{lyrics: "Travel the world and the seven seas", showTime: 24500},
 			{lyrics: "Everybody is looking for something", showTime: 30500},
@@ -105,12 +130,16 @@ h1{
 			{lyrics: "Some of them want to be abused", showTime: 51500},
 
 			{lyrics: "", showTime: 56500, fn:()=>{
-				pic.style.display = "block";
+				document.getElementsByTagName("img")[0].style.display = "block";
 				document.getElementById("img-holder").style.display = "block";
+				randomPic()
 			}},
 			{lyrics: "", showTime: 58000},
 
-			{lyrics: "Sweet dreams are made of this", showTime: 93500},
+			{lyrics: "Sweet dreams are made of this", showTime: 93500, fn:()=>{
+				document.getElementById("frame1").style.display = "block";	
+				document.getElementById("frame1").style.animation = "noise1 .6s linear infinite";
+			}},
 			{lyrics: "Who had a mind to disagree", showTime: 98500},
 			{lyrics: "Travel the world and the seven seas", showTime: 103500},
 			{lyrics: "Everybody is looking for something", showTime: 108500},
@@ -154,19 +183,9 @@ h1{
 			{lyrics: "", showTime: 259000},
 
 		];
-		
-		var lr = document.getElementById("showlr");
-		var lr1 = document.getElementById("showlr1");
-
-		var pic = document.getElementsByTagName("img")[0];
-		pic.style.display = "none";
-
-		//text
-		document.getElementById("frame1").style.display = "none";
-		document.getElementById("frame1").style.animation = "none";
 
 		lyrics.forEach(v=>{
-			setLyrics(v.lyrics, v.showTime)
+			setLyrics(v.lyrics, v.showTime, v.fn)
 		})
 
 		function setLyrics(lyrics, showTime, extraFn = ()=>{}){
@@ -178,38 +197,50 @@ h1{
 			
 		}
 
-		window.setTimeout(picShow,56500)
 	}
 
 	function initSweetDreams(){
 		return document.querySelector('#music').play();
 	}
 
+	function randomPic(){
+		var pics = document.querySelectorAll(".pics")
+		var randomIndex = Math.floor(Math.random() * pics.length)
+		pics.forEach(elm=>{elm.style.display = "none"})
+		pics[randomIndex].style.display = "block"
+		setTimeout(()=>{randomPic()}, (Math.random() * (400 - 200)) + 200)
+	}
+
 	
 	window.onload=()=>{
-		var audio = document.createElement("AUDIO")
-		document.body.appendChild(audio);
-		audio.src = "./src/Sweet Dreams (Are Made Of This) (Alt. Version).mp3"
-		var promise = audio.play();
-		if (promise !== undefined) {
-			promise.then(_ => {
-				// Autoplay started!
-				console.log("file loaded");
-				document.querySelector('button').style.display = "none"
-				playSweetDreams();
-			}).catch(error => {
-				// Autoplay was prevented.
-				// Show a "Play" button so that user can start playback.
-				console.log("promise rejected playing file");
-				alert("please click play button");
-				//document.querySelector('body').style.display = "none";
-				// document.querySelector('html').style.background = "black"
-				document.querySelector('button').addEventListener("click",(ev)=>{
+		try{
+			var audio = document.createElement("AUDIO")
+			document.body.appendChild(audio);
+			audio.src = "./src/Sweet Dreams (Are Made Of This) (Alt. Version).mp3"
+			var promise = audio.play();
+			if (promise !== undefined) {
+				promise.then(_ => {
+					// Autoplay started!
+					console.log("file loaded");
 					document.querySelector('button').style.display = "none"
-					document.querySelector('#music').play()
-					playSweetDreams()
-				})
-			});
+					playSweetDreams();
+				}).catch(error => {
+					// Autoplay was prevented.
+					// Show a "Play" button so that user can start playback.
+					console.log("promise rejected playing file", error);
+					alert("please click play button");
+					//document.querySelector('body').style.display = "none";
+					// document.querySelector('html').style.background = "black"
+					document.querySelector('button').style.visibility = "visible"
+					document.querySelector('button').addEventListener("click",(ev)=>{
+						document.querySelector('button').style.display = "none"
+						document.querySelector('#music').play()
+						playSweetDreams()
+					})
+				});
+			}
+		}catch(err){
+			console.error(err)
 		}
 	}
 </script>
