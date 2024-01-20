@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3",
-    "node-sass": "^7.0.1",
-    "sass": "^1.49.9"
+    "express": "^4.17.3"
   }
 }
